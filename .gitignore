@@ -1,0 +1,29 @@
+node_modules
+.DS_Store
+
+# Logs
+logs
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build output
+dist
+
+# Dependency directories
+bower_components
+
+# IDE specific files
+.idea
+.vscode
+# OS generated files
+Thumbs.db
+# Temporary files
+
+target
+**/*.rs.bk
+Cargo.lock
+core/bin/
+core/pkg/.gitignore
+wasm-pack.log
