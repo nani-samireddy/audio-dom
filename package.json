@@ -1,0 +1,39 @@
+{
+  "name": "audio-dom",
+  "version": "1.0.0",
+  "description": "Record your interactions with the webpage and audio seamlessly",
+  "main": "dist/audio-dom.cjs.js",
+  "module": "dist/audio-dom.esm.js",
+  "scripts": {
+    "build:core": "cd core && wasm-pack build --target nodejs --out-dir pkg",
+    "build": "npm run build:core && rollup -c",
+    "watch": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nani-samireddy/audio-dom.git"
+  },
+  "keywords": [
+    "audio dom",
+    "dom",
+    "audio",
+    "recording"
+  ],
+  "author": "nani-samireddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nani-samireddy/audio-dom/issues"
+  },
+  "homepage": "https://github.com/nani-samireddy/audio-dom#readme",
+  "dependencies": {
+    "audio-dom-core": "file:./core/pkg"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.5",
+    "rollup": "^4.44.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-wasm": "^3.0.0",
+    "typescript": "^5.8.3"
+  }
+}
